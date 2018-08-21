@@ -26,3 +26,5 @@ variable "subnetgrp_create" {}
 variable "name_prefix" {}
 
 variable "identifier" {}
+
+variable "subnet_ids" {}
