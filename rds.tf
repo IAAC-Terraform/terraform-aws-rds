@@ -8,4 +8,7 @@ resource "aws_db_instance" "rds" {
   username             = "${var.username}"
   password             = "${var.password}"
   port                 = "${var.port}"
+  availability_zone = "${var.availability_zone}"
+  multi_az = "${var.multi_az}"
+  db_subnet_group_name = "${var.db_subnet_group_name}"
 }
