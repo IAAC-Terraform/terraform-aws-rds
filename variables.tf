@@ -16,10 +16,13 @@ variable "password" {}
 
 variable "port" {}
 
-variable "db_subnet_group_name" {
-    type = "list"
-}
 
 variable "multi_az" {
     default = true
 }
+
+variable "subnetgrp_create" {}
+
+variable "name_prefix" {}
+
+variable "identifier" {}
