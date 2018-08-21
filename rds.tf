@@ -1,6 +1,6 @@
 resource "aws_db_subnet_group" "dbgrp" {
-  count = "${var.subnetgrp_create ? 1 : 0}"
-
+  count = "${var.subnetgrp_create && var.create_vpc ? 1 : 0}"
+  
   name_prefix = "${var.name_prefix}"
   description = "Database subnet group for ${var.identifier}"
   subnet_ids  = ["${var.subnet_ids}"]
@@ -8,6 +8,7 @@ resource "aws_db_subnet_group" "dbgrp" {
 
 
 resource "aws_db_instance" "rds" {
+  count = "${var.create_vpc && var.create_rds ? 1 : 0}"
   allocated_storage    = "${var.allocated_storage}"
   storage_type         = "${var.storage_type}"
   engine               = "${var.engine}"
