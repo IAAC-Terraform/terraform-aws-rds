@@ -20,10 +20,6 @@ variable "db_subnet_group_name" {
     type = "list"
 }
 
-variable "availability_zone" {
-    type = "list"
-}
-
 variable "multi_az" {
     default = true
 }
