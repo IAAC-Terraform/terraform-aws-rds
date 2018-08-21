@@ -27,4 +27,6 @@ variable "name_prefix" {}
 
 variable "identifier" {}
 
-variable "subnet_ids" {}
+variable "subnet_ids" {
+    type = "list"
+}
