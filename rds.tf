@@ -7,4 +7,5 @@ resource "aws_db_instance" "rds" {
   name                 = "${var.name}"
   username             = "${var.username}"
   password             = "${var.password}"
+  port                 = "${var.port}"
 }
