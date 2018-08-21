@@ -17,6 +17,7 @@ resource "aws_db_instance" "rds" {
   username             = "${var.username}"
   password             = "${var.password}"
   port                 = "${var.port}"
+  skip_final_snapshot = "${var.skip_final_snapshot}"
   multi_az = "${var.multi_az}"
   db_subnet_group_name = "${aws_db_subnet_group.dbgrp.id}"
 }

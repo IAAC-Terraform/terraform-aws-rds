@@ -30,3 +30,5 @@ variable "identifier" {}
 variable "subnet_ids" {
     type = "list"
 }
+
+variable "skip_final_snapshot" {}
