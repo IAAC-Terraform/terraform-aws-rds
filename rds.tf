@@ -23,4 +23,5 @@ resource "aws_db_instance" "rds" {
   publicly_accessible = "${var.publicly_accessible}"
   multi_az = "${var.multi_az}"
   db_subnet_group_name = "${aws_db_subnet_group.dbgrp.id}"
+  tags = "${merge(map("Name", format("%s", var.name)), var.tags)}"
 }

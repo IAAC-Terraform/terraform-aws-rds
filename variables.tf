@@ -41,3 +41,7 @@ variable "copy_tags_to_snapshot" {}
 
 variable "publicly_accessible" {}
 
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  default     = {}
+}
