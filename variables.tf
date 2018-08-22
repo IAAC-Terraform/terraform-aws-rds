@@ -36,3 +36,8 @@ variable "skip_final_snapshot" {}
 variable "create_vpc" {}
 
 variable "create_rds" {}
+
+variable "copy_tags_to_snapshot" {}
+
+variable "publicly_accessible" {}
+

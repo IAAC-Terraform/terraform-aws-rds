@@ -19,6 +19,8 @@ resource "aws_db_instance" "rds" {
   password             = "${var.password}"
   port                 = "${var.port}"
   skip_final_snapshot = "${var.skip_final_snapshot}"
+  copy_tags_to_snapshot = "${var.copy_tags_to_snapshot}"
+  publicly_accessible = "${var.publicly_accessible}"
   multi_az = "${var.multi_az}"
   db_subnet_group_name = "${aws_db_subnet_group.dbgrp.id}"
 }
